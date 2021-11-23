@@ -1,21 +1,18 @@
 var buttonPaper, buttonRock, buttonScissors, buttonTest;
 
-/**
- * Describe this function...
- */
+buttonTest = document.getElementById('button-test');
+
+buttonRock = document.getElementById('button-rock');
+
+buttonPaper = document.getElementById('button-paper');
+
+buttonScissors = document.getElementById('button-scissors');
+
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
-}
-buttonTest = document.getElementById('button-test');
-buttonTest.addEventListener('click', function(){ buttonClicked('Guzik TEST'); });
-buttonRock = document.getElementById('button-rock');
-buttonRock.addEventListener('click', function(){ buttonClicked('Guzik Kamień'); });
-buttonPaper = document.getElementById('button-paper');
-buttonPaper.addEventListener('click', function(){ buttonClicked('Guzik Papier'); });
-buttonScissors = document.getElementById('button-scissors');
-buttonScissors.addEventListener('click', function(){ buttonClicked('Guzik Nożyce'); });
-var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
+
+  var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
 
 
 function getMoveName(argMoveId) {
@@ -56,5 +53,10 @@ console.log('wylosowana liczba to: ' + randomNumber);
 computerMove = getMoveName(randomNumber);
 console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove);
-Step JavaScript
-Run JavaScript
+
+}
+
+buttonTest.addEventListener('click', function(){ buttonClicked('Guzik TEST'); });
+buttonRock.addEventListener('click', function(){ buttonClicked('Guzik Kamień'); });
+buttonPaper.addEventListener('click', function(){ buttonClicked('Guzik Papier'); });
+SbuttonScissors.addEventListener('click', function(){ buttonClicked('Guzik Nożyce'); });
